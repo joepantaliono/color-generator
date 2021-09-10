@@ -4,7 +4,6 @@ function generateRandomHex() {
     let randomHex = "#" 
     while(randomHex.length < 7) {
         randomHex += values[(Math.floor(Math.random() * 16))];
-        console.log(randomHex)
     }
     return randomHex
 };
@@ -19,11 +18,8 @@ window.onload = function() {
             var colors = [generateRandomHex(), generateRandomHex(), generateRandomHex()];
             for(i = 0; i < colors.length; i++) {
                 var div = document.createElement("div")
-                div.style.width = "100px";
-                div.style.height = "250px";
                 div.style.background = colors[i];
-                div.style.color = "white";
-                div.innerHTML = colors[i];
+                div.innerHTML = `<p>${colors[i]}</p>`;
                 div.classList.add("color-containers")
                 document.getElementById("main").appendChild(div);
             }
@@ -33,7 +29,7 @@ window.onload = function() {
             for(i = 0; i < containers.length; i++) {
                 var newColor = generateRandomHex();
                 containers[i].style.background = newColor;
-                containers[i].innerHTML = newColor;
+                containers[i].innerHTML = `<p>${newColor}</p>`;
             }
         }
     }
