@@ -1,4 +1,7 @@
 ## Color palette generator using JavaScript
+
+### Live version: https://joepantaliono.github.io/color-generator/
+
 ### Used:
 - HTML, CSS, vanilla JavaScript
 - DOM manipulation
