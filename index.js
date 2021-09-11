@@ -8,13 +8,17 @@ function generateRandomHex() {
     return randomHex
 };
 
-
-// generate 3 colors on click of button
 window.onload = function() {
     var clicked = false;
     document.getElementById("generate").onclick = function () {
         if (clicked == false) {
             clicked = true;
+            if (window.innerWidth <= 600) {
+                document.getElementById('page-title').setAttribute('id', 'page-title-smaller');
+            }
+            else {
+                document.getElementById('page-title').setAttribute('id', 'page-title-larger')
+            }
             var colors = [generateRandomHex(), generateRandomHex(), generateRandomHex()];
             for(i = 0; i < colors.length; i++) {
                 var div = document.createElement("div")
